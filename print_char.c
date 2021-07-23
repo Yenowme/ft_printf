@@ -6,7 +6,7 @@
 /*   By: jeong-yena <jeong-yena@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 22:28:30 by jeong-yena        #+#    #+#             */
-/*   Updated: 2021/07/17 16:58:13 by jeong-yena       ###   ########.fr       */
+/*   Updated: 2021/07/23 16:43:16 by jeong-yena       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ int	print_string(char *arg)
 {
 	int	rt;
 
-	rt = ft_putstr(arg);
+	if (!arg)
+		rt = ft_putstr("(null)");
+	else
+		rt = ft_putstr(arg);
 	return (rt);
 }

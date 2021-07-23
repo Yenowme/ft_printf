@@ -6,7 +6,7 @@
 /*   By: jeong-yena <jeong-yena@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 17:03:17 by jeong-yena        #+#    #+#             */
-/*   Updated: 2021/07/21 16:28:09 by jeong-yena       ###   ########.fr       */
+/*   Updated: 2021/07/23 18:13:39 by jeong-yena       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,16 @@ int	print_pointer(unsigned long long ag)
 	int		rt;
 	char	*pointer;
 
+	if (!ag)
+	{
+		rt = ft_putstr("0x0");
+		return (rt);
+	}
 	pointer = to_hexbase(ag);
 	if (!pointer)
 		return (0);
 	rt = ft_putstr("0x");
 	rt += ft_putstr(pointer);
+	free(pointer);
 	return (rt);
 }

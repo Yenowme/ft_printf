@@ -52,5 +52,5 @@ Mkfile.old
 dkms.conf
 
 .prettierignore
-.main
+main.c
 

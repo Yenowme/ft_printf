@@ -30,8 +30,8 @@ re : fclean all
 
 test:
 	make all -C $(LIBFT)/
-	$(CC) -g3 $(SRCS) main.c -L./libft -l ft
+	$(CC) -g3 $(SRCS) main2.c -L./libft -l ft
 
-leek:
+leak:
 	make all -C $(LIBFT)/
-	$(CC) -g3 -fsanitize=address $(SRCS) main.c -L./libft -l ft
+	$(CC) -g3 -fsanitize=address $(SRCS) main2.c -L./libft -l ft

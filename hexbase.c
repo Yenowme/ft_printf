@@ -6,7 +6,7 @@
 /*   By: jeong-yena <jeong-yena@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 20:09:21 by jeong-yena        #+#    #+#             */
-/*   Updated: 2021/07/20 18:09:38 by jeong-yena       ###   ########.fr       */
+/*   Updated: 2021/07/23 18:23:12 by jeong-yena       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ char	*to_hexbase(unsigned long long ag)
 	if (!rt)
 		return (0);
 	hexbase(rt, &i, ag);
+	rt[i] = 0;
 	return (rt);
 }
