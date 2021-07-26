@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jeong-yena <jeong-yena@student.42.fr>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/07/26 17:23:54 by jeong-yena        #+#    #+#              #
+#    Updated: 2021/07/26 17:23:56 by jeong-yena       ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 NAME		= libftprintf.a
@@ -27,11 +39,3 @@ clean :
 	make clean -C $(LIBFT)
 
 re : fclean all
-
-test:
-	make all -C $(LIBFT)/
-	$(CC) -g3 $(SRCS) main2.c -L./libft -l ft
-
-leak:
-	make all -C $(LIBFT)/
-	$(CC) -g3 -fsanitize=address $(SRCS) main2.c -L./libft -l ft
