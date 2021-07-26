@@ -6,7 +6,7 @@
 /*   By: jeong-yena <jeong-yena@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 15:31:11 by jeong-yena        #+#    #+#             */
-/*   Updated: 2021/07/23 15:21:39 by jeong-yena       ###   ########.fr       */
+/*   Updated: 2021/07/26 20:42:50 by jeong-yena       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ int	ft_printf(const char *arg, ...)
 
 	va_start(ap, arg);
 	rt = parse_arg(ap, arg);
+	va_end(ap);
 	return (rt);
 }
